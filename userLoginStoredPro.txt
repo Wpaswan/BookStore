@@ -1,0 +1,7 @@
+create procedure sp_LoginUser
+@EmailId varchar(25),
+@password varchar(20)
+As
+Begin
+select EmailId,password from UserRegister where EmailId=@EmailId AND password=@password
+End
