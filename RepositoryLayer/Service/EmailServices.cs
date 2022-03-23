@@ -15,7 +15,7 @@ namespace RepositoryLayer.Service
                 client.EnableSsl = true;
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
                 client.UseDefaultCredentials = true;
-                client.Credentials = new NetworkCredential("dablumcapaswan@gmail.com", "Dablu1#paswan");
+                client.Credentials = new NetworkCredential("dablumcapaswan@gmail.com", "Dablu1#paswan1234");
 
                 MailMessage msgobj = new MailMessage();
                 msgobj.To.Add(email);
