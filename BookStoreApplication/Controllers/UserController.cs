@@ -7,18 +7,22 @@ using System.Threading.Tasks;
 
 namespace BookStoreApplication.Controllers
 {
+   
 
     [ApiController]
     [Route("[controller]")]
     public class UserController : ControllerBase
     {
         IUserBL userBL;
-
+      
         public UserController(IUserBL userBL)
         {
+           
             this.userBL = userBL;
 
         }
+       
+
         [HttpPost("register")]
         public async Task<ActionResult> RegisterUser(UserPostModel userPost)
         {
@@ -62,8 +66,11 @@ namespace BookStoreApplication.Controllers
             {
                 return BadRequest("Email should not be null or empty");
             }
+
             try
             {
+               
+
                 var result = this.userBL.ForgotPassword(EmailId);
                 if (result != null)
                 {
